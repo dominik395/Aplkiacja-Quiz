@@ -1,11 +1,12 @@
 import React from "react";
 
-const SingUpForm = ({ onChangeData, onSumbitFrom }) => {
+const SingUpForm = ({ onChangeData, onSumbitFrom, error }) => {
     return (
         <>
             <div className="container">
                 <div className="columns is-centered">
                     <div className="column is-half">
+                        {error ? error : null}
                         <form onSubmit={e => onSumbitFrom(e)}>
                             <div className="field">
                                 <label className="label">Imię</label>
