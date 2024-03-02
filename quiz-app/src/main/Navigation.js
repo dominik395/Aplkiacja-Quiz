@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Template from "./Template";
 import Login from './components/Login'
-import SingUp from "./components/SingUp";
+import SingUp from "./components/singUp/SingUp";
 import Logout from "./components/Logout";
 
 const Navigation = () => {
