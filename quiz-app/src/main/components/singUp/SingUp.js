@@ -1,16 +1,17 @@
 import React from "react";
 import SingUpForm from "./SingUpForm";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const SingUp = ({ addUser }) => {
+    const navigateToUrl = useNavigate()
     const [formData, setFormData] = useState({
         name: '',
         surname: '',
         nick: '',
         email: '',
         password: '',
-        password2: '',
-        login: false,
+        password2: ''
     })
     const [error, setError] = useState('')
 
@@ -26,6 +27,15 @@ const SingUp = ({ addUser }) => {
         if (validateForm()) {
             console.log(formData)
             addUser(formData)
+            setFormData({
+                name: '',
+                surname: '',
+                nick: '',
+                email: '',
+                password: '',
+                password2: ''
+            })
+            navigateToUrl('/login')
         }
     }
 
@@ -42,9 +52,12 @@ const SingUp = ({ addUser }) => {
 
     return (
         <>
-            <SingUpForm onChangeData={e => onChangeData(e)} 
+            <SingUpForm 
+                onChangeData={e => onChangeData(e)} 
                 onSumbitFrom={e => onSumbitFrom(e)}
-                error={error}/>
+                error={error}
+                formData={formData}
+            />
         </>
     )
 }
