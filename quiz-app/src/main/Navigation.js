@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Template from "./Template";
+import Login from './components/Login'
+import SingUp from "./components/SingUp";
+import Logout from "./components/Logout";
 
 const Navigation = () => {
     return (
@@ -12,6 +15,9 @@ const Navigation = () => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/blog" element={<Blog />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/singUp" element={<SingUp />} />
+                        <Route path="/logout" element={<Logout />} />
                     </Routes>
                 </Template>
             </BrowserRouter>
