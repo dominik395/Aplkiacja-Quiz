@@ -1,2 +1,2 @@
-# testowe-zadanie-rekrutacyjne
-prosta aplikacjia napisana w django 
+# wyszukiwarka filmowa
+prosta aplikacjia napisana w React i Redux
