@@ -1,7 +1,7 @@
 import { ADD_USER } from '../actions/user'
 import initialState from "../initialState";
 
-const user = (state = initialState.users, {type, payload}) => {
+const user = (state = initialState.users.usersList, {type, payload}) => {
     switch(type) {
         case ADD_USER:
             return [
