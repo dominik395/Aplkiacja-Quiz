@@ -3,7 +3,7 @@ import SingUpForm from "./SingUpForm";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-const SingUp = ({ addUser }) => {
+const SingUp = ({ users, addUser }) => {
     const navigateToUrl = useNavigate()
     const [formData, setFormData] = useState({
         name: '',
@@ -23,6 +23,7 @@ const SingUp = ({ addUser }) => {
     }
 
     const onSumbitFrom = (event) => {
+        console.log(users, 'users all z components')
         event.preventDefault();
         if (validateForm()) {
             console.log(formData)
@@ -44,7 +45,9 @@ const SingUp = ({ addUser }) => {
             return setError(<h1 className="has-text-danger is-size-4">Minimalna długość to 3 znaki!</h1>)
         } else if (formData.password !== formData.password2) {
             return setError(<h1 className="has-text-danger is-size-4">Hasła nie są identyczne!</h1>)
-        } else {
+        } else if (users.some(el => el.nick === formData.nick)){
+            return setError(<h1 className="has-text-danger is-size-4">Taki login już istnieje!</h1>)
+        }else {
             setError('')
             return true
         }

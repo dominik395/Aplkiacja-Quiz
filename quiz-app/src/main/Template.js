@@ -10,9 +10,6 @@ const Template = ({ children }) => {
                         <Link to={'/'}>Home</Link>
                     </div>
                     <div className="column is-narrow">
-                        <Link to={'/blog'}>Blog</Link>
-                    </div>
-                    <div className="column is-narrow">
                         <Link to={'/login'}>Login</Link>
                     </div>
                     <div className="column is-narrow">
