@@ -40,7 +40,7 @@ const SingUp = ({ addUser }) => {
     }
 
     const validateForm = () => {
-        if (formData.name.length < 3 || formData.surname.length < 3 || formData.nick.length < 3) {
+        if (formData.name.length < 2 || formData.surname.length < 2 || formData.nick.length < 2) {
             return setError(<h1 className="has-text-danger is-size-4">Minimalna długość to 3 znaki!</h1>)
         } else if (formData.password !== formData.password2) {
             return setError(<h1 className="has-text-danger is-size-4">Hasła nie są identyczne!</h1>)

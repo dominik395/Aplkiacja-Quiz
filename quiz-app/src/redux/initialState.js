@@ -1,6 +1,6 @@
 const initialState = {
     users: {
-        userLogged: {},
+        userLogin: {},
         usersList: []
     },
 }
