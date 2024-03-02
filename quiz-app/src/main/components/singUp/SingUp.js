@@ -2,14 +2,15 @@ import React from "react";
 import SingUpForm from "./SingUpForm";
 import { useState } from "react";
 
-const SingUp = () => {
+const SingUp = ({ addUser }) => {
     const [formData, setFormData] = useState({
         name: '',
         surname: '',
         nick: '',
         email: '',
         password: '',
-        password2: ''
+        password2: '',
+        login: false,
     })
     const [error, setError] = useState('')
 
@@ -24,6 +25,7 @@ const SingUp = () => {
         event.preventDefault();
         if (validateForm()) {
             console.log(formData)
+            addUser(formData)
         }
     }
 

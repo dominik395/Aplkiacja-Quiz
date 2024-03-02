@@ -1,8 +1,13 @@
 import React from "react";
 
-const Home = () => {
+const Home = ({ users }) => {
     return (
-        <h1>To jest home</h1>
+        <>
+            <h1>To jest home</h1>
+            <ul>
+                {users.map((el, index) => <li key={index}>{el.name}</li>)}
+            </ul>
+        </>
     )
 }
 
