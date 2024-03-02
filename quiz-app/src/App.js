@@ -1,8 +1,9 @@
 import React from "react";
+import Navigation from "./main/Navigation";
 
 function App() {
   return (
-    <h1>Konfiguracja środowiska</h1>
+    <Navigation />
   );
 }
 
