@@ -2,8 +2,9 @@ import Home from "../components/Home";
 import { connect } from "react-redux";
 
 const mapState = ( store ) => {
+    console.log(store, 'z home')
     return {
-        users: store.users.usersList
+        user: store.users.userLogin
     }
 }
 

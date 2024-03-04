@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./containers/Home";
 import Template from "./Template";
-import Login from './components/Login'
+import Login from './containers/Login'
 import SingUp from "./containers/SingUp";
 import Logout from "./components/Logout";
 
