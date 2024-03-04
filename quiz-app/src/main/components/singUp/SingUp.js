@@ -23,7 +23,6 @@ const SingUp = ({ users, addUser }) => {
     }
 
     const onSumbitFrom = (event) => {
-        console.log(users, 'users all z components')
         event.preventDefault();
         if (validateForm()) {
             console.log(formData)

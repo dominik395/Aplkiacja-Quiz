@@ -1,4 +1,4 @@
-import { ADD_USER, LOGIN_USER } from '../actions/user'
+import { ADD_USER, LOGIN_USER, LOGOUT_USER } from '../actions/user'
 import initialState from "../initialState";
 
 const user = (state = initialState.users, {type, payload}) => {
@@ -15,6 +15,13 @@ const user = (state = initialState.users, {type, payload}) => {
                 users: {
                     userLogin: { ...payload },
                     usersList: state.users.usersList.filter(user => user.nick !== payload.nick)
+                }
+            }
+        case LOGOUT_USER:
+            return {
+                users: {
+                    userLogin: {},
+                    usersList: [ ...state.users.usersList, payload ]
                 }
             }
         default:

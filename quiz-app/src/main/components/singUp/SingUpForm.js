@@ -58,7 +58,7 @@ const SingUpForm = ({ onChangeData, onSumbitFrom, error, formData }) => {
 
                             <div className="field">
                                 <div className="control">
-                                    <button className="button is-primary">Zaloguj</button>
+                                    <button className="button is-primary">Stwórz konto</button>
                                 </div>
                             </div>
                         </form>
