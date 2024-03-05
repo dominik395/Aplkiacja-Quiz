@@ -38,8 +38,6 @@ const Login = ({ users, loginUser }) => {
  
         return !!matchingUser;
     };
-    
-    
 
     return (
         <>

@@ -5,7 +5,7 @@ const Template = ({ children }) => {
     return (
         <>
             <section>
-                <div className="columns">
+                <div className="columns is-size-5">
                     <div className="column is-narrow">
                         <Link to={'/'}>Home</Link>
                     </div>

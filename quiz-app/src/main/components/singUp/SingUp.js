@@ -11,7 +11,8 @@ const SingUp = ({ users, addUser }) => {
         nick: '',
         email: '',
         password: '',
-        password2: ''
+        password2: '',
+        points: 0
     })
     const [error, setError] = useState('')
 
@@ -33,7 +34,8 @@ const SingUp = ({ users, addUser }) => {
                 nick: '',
                 email: '',
                 password: '',
-                password2: ''
+                password2: '',
+                points: 0
             })
             navigateToUrl('/login')
         }
