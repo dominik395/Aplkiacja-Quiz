@@ -3,7 +3,7 @@ import SingUp from "../components/singUp/SingUp";
 import { add_user } from "../../redux/actions/user";
 
 const mapState = ( store ) => ({
-    users: store.users.usersList
+    users: store.user.usersList
 })
 
 const mapDispatch = ( dispatch ) => ({

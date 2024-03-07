@@ -1,8 +1,10 @@
 import React from "react";
 import PlayMainViewForm from "../../containers/PlayMainViewForm";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
-const PlayMainView = () => {
+const PlayMainView = ({ selectedCategory }) => {
+    const navigateToUrl = useNavigate()
     const [category, setCategory] = useState({
         categoryName: 'Vehicles',
         categoryId: 28
@@ -18,6 +20,8 @@ const PlayMainView = () => {
     const onSubmitForm = (event) => {
         event.preventDefault();
         console.log(category)
+        selectedCategory(category)
+        navigateToUrl('/play/game/view')
     }
 
     return (

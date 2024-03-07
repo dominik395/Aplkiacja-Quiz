@@ -5,7 +5,8 @@ import Template from "./Template";
 import Login from './containers/Login'
 import SingUp from "./containers/SingUp";
 import Logout from "./containers/Logout";
-import PlayMainView from "./components/play/PlayMainView";
+import PlayMainView from "./containers/PlayMainView";
+import GameView from "./containers/GameView";
 
 const Navigation = () => {
     return (
@@ -18,6 +19,7 @@ const Navigation = () => {
                             <Route path="/singUp" element={<SingUp />} />
                             <Route path="/logout" element={<Logout />} />
                             <Route path="/play/mainView" element={<PlayMainView />} />
+                            <Route path="/play/game/view" element={<GameView />} />
                         </Routes>
                     </Template>
                 </BrowserRouter>

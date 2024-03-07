@@ -3,7 +3,7 @@ import Login from "../components/login/Login";
 import { login_user } from "../../redux/actions/user";
 
 const mapState = ( store ) => ({
-    users: store.users.usersList
+    users: store.user.usersList
 })
 
 const mapDispatch = ( dispatch ) => ({

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { logout_user } from "../../redux/actions/user";
 
 const mapState = ( store ) => ({
-    loginUser: store.users.userLogin
+    loginUser: store.user.userLogin
 })
 
 const mapDispatch = ( dispatch ) => ({

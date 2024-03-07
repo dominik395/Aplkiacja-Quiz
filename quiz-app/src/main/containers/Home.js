@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 const mapState = ( store ) => {
     return {
-        user: store.users.userLogin
+        user: store.user.userLogin
     }
 }
 
