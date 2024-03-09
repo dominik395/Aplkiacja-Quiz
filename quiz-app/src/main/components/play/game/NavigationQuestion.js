@@ -13,7 +13,7 @@ const NavigationQuestion = ({ listLength, current, changeCategoryNumber, changeC
                 <button className={`pagination-next ${current+1 === listLength && 'is-disabled'}`}
                     onClick={() => changeCategoryNumber(false)}
                     disabled={current+1 === listLength}
-                    >Next page</button>
+                    >Next</button>
 
                 <ul className="pagination-list">
                     {[...Array(listLength).keys()].map((el, idx) => (

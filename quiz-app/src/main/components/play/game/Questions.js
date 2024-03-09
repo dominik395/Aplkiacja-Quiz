@@ -4,9 +4,14 @@ const Questions = ({ question }) => {
     console.log(question, 'z questions')
     return (
         <>
-            <h1>test z questions: {question.question}</h1>
-            <button>TRUE</button>
-            <button>FALSE</button>
+            <div className="message is-info is-medium m-3 p-3">
+                <p className="message-body is-centered">Question: {question.question}</p>
+            </div>
+
+            <div className="buttons are-medium is-centered m-3 p-3">
+                <button className="button is-success">TRUE</button>
+                <button className="button is-danger">FALSE</button>
+            </div>
         </>
     )
 }
