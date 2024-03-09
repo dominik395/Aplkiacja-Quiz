@@ -7,6 +7,8 @@ import SingUp from "./containers/SingUp";
 import Logout from "./containers/Logout";
 import PlayMainView from "./containers/PlayMainView";
 import GameView from "./containers/GameView";
+// import Question from "./components/play/game/Question";
+// import Questions from "./components/play/game/Questions";
 
 const Navigation = () => {
     return (
@@ -19,7 +21,8 @@ const Navigation = () => {
                             <Route path="/singUp" element={<SingUp />} />
                             <Route path="/logout" element={<Logout />} />
                             <Route path="/play/mainView" element={<PlayMainView />} />
-                            <Route path="/play/game/view" element={<GameView />} />
+                            <Route path="/play/game/view/:id" element={<GameView />} />
+                            {/* <Route path="/play/game/view/:id" element={<Questions />} /> */}
                         </Routes>
                     </Template>
                 </BrowserRouter>

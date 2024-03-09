@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { getQuestions } from "../../../../API/getQuestion";
+import Questions from "./Questions";
 
 const GameView = ({ selectedCategory }) => {
     const [categoriesList, setCategoriesList] = useState('')
@@ -14,10 +15,13 @@ const GameView = ({ selectedCategory }) => {
         getData(selectedCategory.categoryId)
     }, [selectedCategory.categoryId])
     
-    console.log(categoriesList)
+    console.log(categoriesList, 'lista kategori z GameVIew')
     return (
         <>
-            <h1>Game View</h1>
+        {categoriesList && 
+            <Questions 
+                categoriesList={categoriesList}
+            />}
         </>
     )
 }
