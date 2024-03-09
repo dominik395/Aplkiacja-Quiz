@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavigationQuestion = ({ listLength, current, changeCategoryNumber }) => {
+const NavigationQuestion = ({ listLength, current, changeCategoryNumber, changeCategoryNumber2 }) => {
     return (
         <>
             <nav className="pagination is-medium is-centered m-1 pt-4" role="navigation" aria-label="pagination">
@@ -18,8 +18,12 @@ const NavigationQuestion = ({ listLength, current, changeCategoryNumber }) => {
                 <ul className="pagination-list">
                     {[...Array(listLength).keys()].map((el, idx) => (
                         <li key={idx+1}>
-                            <i className={`pagination-link ${idx === current && 'is-current'}`}
-                             aria-label="Page 1" aria-current="page">{idx+1}</i>
+                            <button className={`pagination-link ${idx === current && 'is-current'}`}
+                             aria-label="Page 1" 
+                             aria-current="page"
+                             value={idx}
+                             onClick={e => changeCategoryNumber2(e.target.value)}
+                             >{idx+1}</button>
                         </li>
                     ))}
                 </ul>

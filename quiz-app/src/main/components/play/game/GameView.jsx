@@ -29,6 +29,7 @@ const GameView = ({ selectedCategory }) => {
                     listLength={categoriesList.length}
                     current={categoryNumber}
                     changeCategoryNumber={(modulo) => setCategoryNumber(prev => modulo ? prev - 1 : prev + 1)}
+                    changeCategoryNumber2={(e) => setCategoryNumber(+e)}
                 />
             </div>}
         </>
