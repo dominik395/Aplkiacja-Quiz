@@ -2,8 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { getQuestions } from "../../../../API/getQuestion";
 import Questions from "./Questions";
+import NavigationQuestion from "./NavigationQuestion";
 
 const GameView = ({ selectedCategory }) => {
+    const [categoryNumber, setCategoryNumber] = useState(0)
     const [categoriesList, setCategoriesList] = useState('')
 
     useEffect(() => {
@@ -15,13 +17,20 @@ const GameView = ({ selectedCategory }) => {
         getData(selectedCategory.categoryId)
     }, [selectedCategory.categoryId])
     
-    console.log(categoriesList, 'lista kategori z GameVIew')
     return (
         <>
         {categoriesList && 
-            <Questions 
-                categoriesList={categoriesList}
-            />}
+            <div>
+                <Questions 
+                    question={categoriesList[+categoryNumber]}
+                />
+
+                <NavigationQuestion 
+                    listLength={categoriesList.length}
+                    current={categoryNumber}
+                    changeCategoryNumber={(modulo) => setCategoryNumber(prev => modulo ? prev - 1 : prev + 1)}
+                />
+            </div>}
         </>
     )
 }

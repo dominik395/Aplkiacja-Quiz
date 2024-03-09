@@ -21,7 +21,7 @@ const PlayMainView = ({ selectedCategory }) => {
         event.preventDefault();
         console.log(category)
         selectedCategory(category)
-        navigateToUrl('/play/game/view/1')
+        navigateToUrl('/play/game/view')
     }
 
     return (

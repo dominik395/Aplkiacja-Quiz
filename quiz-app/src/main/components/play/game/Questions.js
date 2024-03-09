@@ -1,12 +1,12 @@
 import React from "react"
-import Question from "./Question"
 
-const Questions = ({ categoriesList }) => {
+const Questions = ({ question }) => {
+    console.log(question, 'z questions')
     return (
         <>
-            {categoriesList.map((el, idx) => (
-                <Question key={idx} element={el}/>
-            ))}
+            <h1>test z questions: {question.question}</h1>
+            <button>TRUE</button>
+            <button>FALSE</button>
         </>
     )
 }

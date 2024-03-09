@@ -21,7 +21,7 @@ const Navigation = () => {
                             <Route path="/singUp" element={<SingUp />} />
                             <Route path="/logout" element={<Logout />} />
                             <Route path="/play/mainView" element={<PlayMainView />} />
-                            <Route path="/play/game/view/:id" element={<GameView />} />
+                            <Route path="/play/game/view/" element={<GameView />} />
                             {/* <Route path="/play/game/view/:id" element={<Questions />} /> */}
                         </Routes>
                     </Template>
