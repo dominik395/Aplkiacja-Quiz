@@ -12,7 +12,8 @@ const initialState = {
             {categoryName: 'Films', categoryId: 11},
             {categoryName: 'Video Games', categoryId: 15}
         ],
-        selectedGame: {}
+        selectedGame: {},
+        currentGame: {}
     }
 }
 

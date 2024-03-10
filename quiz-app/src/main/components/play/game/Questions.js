@@ -8,7 +8,7 @@ const Questions = ({ question, isVisible }) => {
         <>  
             <div style={{ display: isVisible ? 'block' : 'none' }}>
                 <QuestionHead question={question} />
-                <QuestionsButtons />
+                <QuestionsButtons question={question}/>
             </div>
         </>
     )

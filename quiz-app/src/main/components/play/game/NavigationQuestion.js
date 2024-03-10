@@ -1,24 +1,14 @@
 import React from "react";
+import NavigationQuestionButtons from "./NavigationQuestionButtons";
 
 const NavigationQuestion = ({ listLength, current, changeCategoryNumber, changeCategoryNumber2 }) => {
     return (
         <>
             <nav className="pagination is-medium is-centered m-1 pt-4" role="navigation" aria-label="pagination">
-
-                <button className={`pagination-previous`}
-                    onClick={() => changeCategoryNumber(true)} 
-                    disabled={current === 0}
-                    >Previous</button>
-
-                <button className={`pagination-next ${current+1 === listLength && 'is-disabled'}`}
-                    onClick={() => changeCategoryNumber(false)}
-                    disabled={current+1 === listLength}
-                    >Next</button>
-                {current === 9 && 
-                    <button className="pagination-next"
-                    >Finish
-                    </button>
-                }
+                <NavigationQuestionButtons
+                    current={current} 
+                    changeCategoryNumber={changeCategoryNumber}
+                    listLength={listLength}/>
 
                 <ul className="pagination-list">
                     {[...Array(listLength).keys()].map((el, idx) => (
