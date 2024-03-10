@@ -1,4 +1,4 @@
-import { ADD_USER, LOGIN_USER, LOGOUT_USER } from '../actions/user'
+import { ADD_USER, LOGIN_USER, LOGOUT_USER, ADD_POINTS } from '../actions/user'
 import initialState from "../initialState";
 
 const user = (state = initialState.users, {type, payload}) => {
@@ -18,6 +18,14 @@ const user = (state = initialState.users, {type, payload}) => {
                     userLogin: {},
                     usersList: [ ...state.usersList, payload ]
                 }
+        case ADD_POINTS:
+            return {
+                ...state,
+                userLogin: {
+                    ...state.userLogin,
+                    points: state.userLogin.points + payload
+                }
+            }
         default:
             return state
     }

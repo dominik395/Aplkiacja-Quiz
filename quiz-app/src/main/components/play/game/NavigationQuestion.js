@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationQuestionButtons from "./NavigationQuestionButtons";
+import NavigationQuestionButtons from "../../../containers/NavigationQuestionButtons";
 
 const NavigationQuestion = ({ listLength, current, changeCategoryNumber, changeCategoryNumber2 }) => {
     return (
