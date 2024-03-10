@@ -14,6 +14,11 @@ const NavigationQuestion = ({ listLength, current, changeCategoryNumber, changeC
                     onClick={() => changeCategoryNumber(false)}
                     disabled={current+1 === listLength}
                     >Next</button>
+                {current === 9 && 
+                    <button className="pagination-next"
+                    >Finish
+                    </button>
+                }
 
                 <ul className="pagination-list">
                     {[...Array(listLength).keys()].map((el, idx) => (

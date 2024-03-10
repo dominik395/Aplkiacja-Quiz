@@ -21,9 +21,9 @@ const GameView = ({ selectedCategory }) => {
         <>
         {categoriesList && 
             <div>
-                <Questions 
-                    question={categoriesList[+categoryNumber]}
-                />
+                {categoriesList.map((question, idx) => (
+                    <Questions key={idx} question={question} isVisible={idx === categoryNumber} />
+                ))}
 
                 <NavigationQuestion 
                     listLength={categoriesList.length}

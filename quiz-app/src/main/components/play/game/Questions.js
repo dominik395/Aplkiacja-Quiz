@@ -1,16 +1,14 @@
 import React from "react"
+import QuestionsButtons from "./QuestionsButtons"
+import QuestionHead from "./QuestionsHead"
 
-const Questions = ({ question }) => {
+const Questions = ({ question, isVisible }) => {
     console.log(question, 'z questions')
     return (
-        <>
-            <div className="message is-info is-medium m-3 p-3">
-                <p className="message-body is-centered">Question: {question.question}</p>
-            </div>
-
-            <div className="buttons are-medium is-centered m-3 p-3">
-                <button className="button is-success">TRUE</button>
-                <button className="button is-danger">FALSE</button>
+        <>  
+            <div style={{ display: isVisible ? 'block' : 'none' }}>
+                <QuestionHead question={question} />
+                <QuestionsButtons />
             </div>
         </>
     )
