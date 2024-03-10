@@ -1,30 +1,40 @@
 import React from "react";
 import { useState } from "react";
 
-const QuestionsButtons = ({ question }) => {
+const QuestionsButtons = ({ question, uploadStats }) => {
     const [hover, setHover] = useState(0)
+    const stats = { points: true, correct: question.question, wrong: '' }
 
     const handleButton = (modulo) => {
+        console.log(question, 'z questions buttons ')
         setHover(modulo)
-        if (!!question.correct_answer) {
-            if (modulo === 1)  {
-                console.log('correct answer')
-            } else {
-                console.log('wrong answer')
-            }
-        } else {
+
+        if (question.correct_answer === 'True' && modulo === 1) {
             console.log('correct answer')
+            uploadStats(stats)
+        } else if (question.correct_answer === 'False' && modulo === 2) {
+            console.log('correct answer')
+            uploadStats(stats)
+        } else {
+            console.log('wrong answser')
+            uploadStats({
+                points: false,
+                wrong: question.question,
+                correct: ''
+            })
         }
     }
 
     return (
         <>
             <div className="buttons are-medium is-centered m-3 p-3">
-                <button className={`button is-success is-outlined ${hover === 1 && 'is-hovered'}`}
+                <button className={`button is-success ${hover === 1 && 'is-hovered'}`}
+                    disabled={hover === 1}
                     onClick={() => handleButton(1)}
                 >TRUE</button>
 
-                <button className={`button is-danger is-outlined ${hover === 2 && 'is-hovered'}`}
+                <button className={`button is-danger ${hover === 2 && 'is-hovered'}`}
+                    disabled={hover === 2}
                     onClick={() => handleButton(2)}
                 >FALSE</button>
             </div>

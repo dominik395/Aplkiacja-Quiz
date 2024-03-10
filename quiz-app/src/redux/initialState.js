@@ -13,7 +13,11 @@ const initialState = {
             {categoryName: 'Video Games', categoryId: 15}
         ],
         selectedGame: {},
-        currentGame: {}
+        currentGame: {
+            points: 0,
+            correctAnswer: [],
+            wrongAnswer: []
+        }
     }
 }
 

@@ -7,7 +7,7 @@ import SingUp from "./containers/SingUp";
 import Logout from "./containers/Logout";
 import PlayMainView from "./containers/PlayMainView";
 import GameView from "./containers/GameView";
-import FinishView from "./components/play/FinishView";
+import FinishView from "./containers/FinishView";
 
 const Navigation = () => {
     return (

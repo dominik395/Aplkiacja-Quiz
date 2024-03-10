@@ -26,7 +26,6 @@ const PlayMainView = ({ selectedCategory }) => {
 
     return (
         <>
-            <h1>Main View</h1>
             <PlayMainViewForm 
                 onSubmitForm={e => onSubmitForm(e)}
                 onChangeData={e => onChangeData(e)}

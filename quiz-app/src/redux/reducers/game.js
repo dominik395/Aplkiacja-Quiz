@@ -12,9 +12,9 @@ const game = (state = initialState.game, {type, payload}) => {
             return {
                 ...state,
                 currentGame: { 
-                    points: 0 + Number(payload.points),
-                    correctAnswer: [ ...state.currentGame.correctAnswer, payload.correct ],
-                    wrongAnswer: [ ...state.currentGame.wrongAnswer, payload.wrong]
+                    points: payload.points ? state.currentGame.points + 5 : state.currentGame.points - 3,
+                    correctAnswer: payload.correct ? [ ...state.currentGame.correctAnswer, payload.correct ] : state.currentGame.correctAnswer,
+                    wrongAnswer: payload.wrong ? [ ...state.currentGame.wrongAnswer, payload.wrong ] : state.currentGame.wrongAnswer
                 }
             }
         default:

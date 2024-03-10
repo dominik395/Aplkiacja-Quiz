@@ -1,6 +1,7 @@
 import React from "react";
 
-const FinishView = () => {
+const FinishView = ({ stats }) => {
+    console.log(stats)
     return (
         <>
             <h1>Finish</h1>
