@@ -6,7 +6,6 @@ const QuestionsButtons = ({ question, uploadStats }) => {
     const stats = { points: true, correct: question.question, wrong: '' }
 
     const handleButton = (modulo) => {
-        console.log(question, 'z questions buttons ')
         setHover(modulo)
 
         if (question.correct_answer === 'True' && modulo === 1) {

@@ -1,5 +1,4 @@
 import React from "react";
-import TestyAPI from "./TestyAPI";
 import { Link } from "react-router-dom";
 
 const Home = ({ user }) => {
@@ -21,7 +20,6 @@ const Home = ({ user }) => {
              <h1 className="has-text-danger is-size-4">Login!</h1>
             }
 
-            <TestyAPI />
         </>
     )
 }

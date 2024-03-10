@@ -24,29 +24,3 @@ const user = (state = initialState.users, {type, payload}) => {
 }
 
 export default user
-
-
-// case ADD_USER:
-//     return {
-//         ...state,
-//         users: {
-//             userLogin: { ...state.users.userLogin },
-//             usersList: [...state.users.usersList, payload]
-//         }
-//     }
-// case LOGIN_USER:
-//     return {
-//         ...state,
-//         users: {
-//             userLogin: { ...payload },
-//             usersList: state.users.usersList.filter(user => user.nick !== payload.nick)
-//         }
-//     }
-// case LOGOUT_USER:
-//     return {
-//         ...state,
-//         users: {
-//             userLogin: {},
-//             usersList: [ ...state.users.usersList, payload ]
-//         }
-//     }
