@@ -21,7 +21,7 @@ const FinishView = ({ stats }) => {
                     <br />
                     <ul>
                         {stats.wrongAnswer.map((el, idx) => (
-                            <li key={idx}>{el}</li>
+                            <li key={idx}>{el[0]} [{el[1]}]</li>
                         ))}
                     </ul>
                 </div>

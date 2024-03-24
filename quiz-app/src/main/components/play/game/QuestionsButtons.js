@@ -18,7 +18,7 @@ const QuestionsButtons = ({ question, uploadStats }) => {
             console.log('wrong answser')
             uploadStats({
                 points: false,
-                wrong: question.question,
+                wrong: [question.question, question.correct_answer],
                 correct: ''
             })
         }
